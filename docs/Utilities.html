@@ -1,0 +1,275 @@
+<!DOCTYPE html>  <html> <head>   <title>Utilities.js</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="AdaptorBase.html">                 AdaptorBase.js               </a>                                           <a class="source" href="Animator.html">                 Animator.js               </a>                                           <a class="source" href="Backstage.html">                 Backstage.js               </a>                                           <a class="source" href="BasicTypes.html">                 BasicTypes.js               </a>                                           <a class="source" href="Commands.html">                 Commands.js               </a>                                           <a class="source" href="Config.html">                 Config.js               </a>                                           <a class="source" href="ConfigBrowser.html">                 ConfigBrowser.js               </a>                                           <a class="source" href="Crypto.html">                 Crypto.js               </a>                                           <a class="source" href="Dates.html">                 Dates.js               </a>                                           <a class="source" href="Dom.html">                 Dom.js               </a>                                           <a class="source" href="FileAdaptor.html">                 FileAdaptor.js               </a>                                           <a class="source" href="FileSystem.html">                 FileSystem.js               </a>                                           <a class="source" href="FileSystemUtils.html">                 FileSystemUtils.js               </a>                                           <a class="source" href="Filters.html">                 Filters.js               </a>                                           <a class="source" href="Formatter.html">                 Formatter.js               </a>                                           <a class="source" href="FormatterHelpers.html">                 FormatterHelpers.js               </a>                                           <a class="source" href="Guide.html">                 Guide.js               </a>                                           <a class="source" href="Http.html">                 Http.js               </a>                                           <a class="source" href="Import.html">                 Import.js               </a>                                           <a class="source" href="Lingo.html">                 Lingo.js               </a>                                           <a class="source" href="ListView.html">                 ListView.js               </a>                                           <a class="source" href="LoaderSaver.html">                 LoaderSaver.js               </a>                                           <a class="source" href="Macros.html">                 Macros.js               </a>                                           <a class="source" href="Manager.html">                 Manager.js               </a>                                           <a class="source" href="Messages.html">                 Messages.js               </a>                                           <a class="source" href="Morpher.html">                 Morpher.js               </a>                                           <a class="source" href="NewTiddler.html">                 NewTiddler.js               </a>                                           <a class="source" href="Numbers.html">                 Numbers.js               </a>                                           <a class="source" href="Options.html">                 Options.js               </a>                                           <a class="source" href="Paramifiers.html">                 Paramifiers.js               </a>                                           <a class="source" href="Popup.html">                 Popup.js               </a>                                           <a class="source" href="RGB.html">                 RGB.js               </a>                                           <a class="source" href="Refresh.html">                 Refresh.js               </a>                                           <a class="source" href="Saving.html">                 Saving.js               </a>                                           <a class="source" href="SavingRSS.html">                 SavingRSS.js               </a>                                           <a class="source" href="Scroller.html">                 Scroller.js               </a>                                           <a class="source" href="Search.html">                 Search.js               </a>                                           <a class="source" href="Slider.html">                 Slider.js               </a>                                           <a class="source" href="Sparkline.html">                 Sparkline.js               </a>                                           <a class="source" href="Story.html">                 Story.js               </a>                                           <a class="source" href="Strings.html">                 Strings.js               </a>                                           <a class="source" href="TW21Loader.html">                 TW21Loader.js               </a>                                           <a class="source" href="TW21Saver.html">                 TW21Saver.js               </a>                                           <a class="source" href="Tabs.html">                 Tabs.js               </a>                                           <a class="source" href="Tiddler.html">                 Tiddler.js               </a>                                           <a class="source" href="TiddlerFields.html">                 TiddlerFields.js               </a>                                           <a class="source" href="TiddlyWiki.html">                 TiddlyWiki.js               </a>                                           <a class="source" href="Toolbar.html">                 Toolbar.js               </a>                                           <a class="source" href="Upgrade.html">                 Upgrade.js               </a>                                           <a class="source" href="Utilities.html">                 Utilities.js               </a>                                           <a class="source" href="UtilitiesPopup.html">                 UtilitiesPopup.js               </a>                                           <a class="source" href="Version.html">                 Version.js               </a>                                           <a class="source" href="Wikifier.html">                 Wikifier.js               </a>                                           <a class="source" href="Wizard.html">                 Wizard.js               </a>                                           <a class="source" href="Zoomer.html">                 Zoomer.js               </a>                                           <a class="source" href="main.html">                 main.js               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               Utilities.js             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>--</p>
+
+<h2>-- TiddlyWiki-specific utility functions</h2>             </td>             <td class="code">               <div class="highlight"><pre></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <p>Returns TiddlyWiki version string</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">formatVersion</span><span class="p">(</span><span class="nx">v</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">v</span> <span class="o">=</span> <span class="nx">v</span> <span class="o">||</span> <span class="nx">version</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">v</span><span class="p">.</span><span class="nx">major</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="nx">v</span><span class="p">.</span><span class="nx">minor</span> <span class="o">+</span> <span class="s2">&quot;.&quot;</span> <span class="o">+</span> <span class="nx">v</span><span class="p">.</span><span class="nx">revision</span> <span class="o">+</span>
+		<span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">alpha</span> <span class="o">?</span> <span class="s2">&quot; (alpha &quot;</span> <span class="o">+</span> <span class="nx">v</span><span class="p">.</span><span class="nx">alpha</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span>
+		<span class="p">(</span><span class="nx">v</span><span class="p">.</span><span class="nx">beta</span> <span class="o">?</span> <span class="s2">&quot; (beta &quot;</span> <span class="o">+</span> <span class="nx">v</span><span class="p">.</span><span class="nx">beta</span> <span class="o">+</span> <span class="s2">&quot;)&quot;</span> <span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">);</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <h1>Compares two TiddlyWiki version objects</h1>
+
+<h1>Returns +1 if v2 is later than v1</h1>
+
+<h1>0 if v2 is the same as v1</h1>
+
+<h1>-1 if v2 is earlier than v1</h1>
+
+<h1>version without a beta number is later than a version with a beta number</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">compareVersions</span><span class="p">(</span><span class="nx">v1</span><span class="p">,</span><span class="nx">v2</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">x1</span><span class="p">,</span><span class="nx">x2</span><span class="p">,</span><span class="nx">i</span><span class="p">,</span><span class="nx">a</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;major&quot;</span><span class="p">,</span><span class="s2">&quot;minor&quot;</span><span class="p">,</span><span class="s2">&quot;revision&quot;</span><span class="p">];</span>
+	<span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">x1</span> <span class="o">=</span> <span class="nx">v1</span><span class="p">[</span><span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="nx">x2</span> <span class="o">=</span> <span class="nx">v2</span><span class="p">[</span><span class="nx">a</span><span class="p">[</span><span class="nx">i</span><span class="p">]]</span> <span class="o">||</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">x1</span><span class="o">&lt;</span><span class="nx">x2</span><span class="p">)</span>
+			<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">x1</span><span class="o">&gt;</span><span class="nx">x2</span><span class="p">)</span>
+			<span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="nx">x1</span> <span class="o">=</span> <span class="nx">v1</span><span class="p">.</span><span class="nx">beta</span> <span class="o">||</span> <span class="mi">9999</span><span class="p">;</span>
+	<span class="nx">x2</span> <span class="o">=</span> <span class="nx">v2</span><span class="p">.</span><span class="nx">beta</span> <span class="o">||</span> <span class="mi">9999</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">x1</span><span class="o">&lt;</span><span class="nx">x2</span><span class="p">)</span>
+		<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">x1</span> <span class="o">&gt;</span> <span class="nx">x2</span> <span class="o">?</span> <span class="o">-</span><span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">merge</span><span class="p">(</span><span class="nx">dst</span><span class="p">,</span><span class="nx">src</span><span class="p">,</span><span class="nx">preserveExisting</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">src</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">preserveExisting</span> <span class="o">||</span> <span class="nx">dst</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span>
+			<span class="nx">dst</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">src</span><span class="p">[</span><span class="nx">i</span><span class="p">];</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">dst</span><span class="p">;</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>Resolve the target object of an event</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">resolveTarget</span><span class="p">(</span><span class="nx">e</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">obj</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">)</span>
+		<span class="nx">obj</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
+	<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">srcElement</span><span class="p">)</span>
+		<span class="nx">obj</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">srcElement</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">obj</span><span class="p">.</span><span class="nx">nodeType</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="c1">// defeat Safari bug</span>
+		<span class="nx">obj</span> <span class="o">=</span> <span class="nx">obj</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">obj</span><span class="p">;</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Returns a string containing the description of an exception, optionally prepended by a message</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">exceptionText</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">message</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">s</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">description</span> <span class="o">||</span> <span class="nx">e</span><span class="p">.</span><span class="nx">toString</span><span class="p">();</span>
+	<span class="k">return</span> <span class="nx">message</span> <span class="o">?</span> <span class="s2">&quot;%0:\n%1&quot;</span><span class="p">.</span><span class="nx">format</span><span class="p">([</span><span class="nx">message</span><span class="p">,</span><span class="nx">s</span><span class="p">])</span> <span class="o">:</span> <span class="nx">s</span><span class="p">;</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-6">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-6">&#182;</a>               </div>               <p>Displays an alert of an exception description with optional message</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">showException</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">message</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="nx">exceptionText</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">message</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">alertAndThrow</span><span class="p">(</span><span class="nx">m</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">alert</span><span class="p">(</span><span class="nx">m</span><span class="p">);</span>
+	<span class="k">throw</span><span class="p">(</span><span class="nx">m</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">glyph</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">glyphs</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nx">g</span><span class="p">.</span><span class="nx">currBrowser</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">b</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">b</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+		<span class="k">while</span><span class="p">(</span><span class="nx">b</span> <span class="o">&lt;</span> <span class="nx">g</span><span class="p">.</span><span class="nx">browsers</span><span class="p">.</span><span class="nx">length</span><span class="o">-</span><span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="o">!</span><span class="nx">g</span><span class="p">.</span><span class="nx">browsers</span><span class="p">[</span><span class="nx">b</span><span class="p">]())</span>
+			<span class="nx">b</span><span class="o">++</span><span class="p">;</span>
+		<span class="nx">g</span><span class="p">.</span><span class="nx">currBrowser</span> <span class="o">=</span> <span class="nx">b</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">g</span><span class="p">.</span><span class="nx">codes</span><span class="p">[</span><span class="nx">name</span><span class="p">])</span>
+		<span class="k">return</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">g</span><span class="p">.</span><span class="nx">codes</span><span class="p">[</span><span class="nx">name</span><span class="p">][</span><span class="nx">b</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createTiddlyText</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span><span class="nx">text</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">return</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">text</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createTiddlyCheckbox</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span><span class="nx">caption</span><span class="p">,</span><span class="nx">checked</span><span class="p">,</span><span class="nx">onChange</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">cb</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;input&quot;</span><span class="p">);</span>
+	<span class="nx">cb</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;type&quot;</span><span class="p">,</span><span class="s2">&quot;checkbox&quot;</span><span class="p">);</span>
+	<span class="nx">cb</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">onChange</span><span class="p">;</span>
+	<span class="nx">parent</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">cb</span><span class="p">);</span>
+	<span class="nx">cb</span><span class="p">.</span><span class="nx">checked</span> <span class="o">=</span> <span class="nx">checked</span><span class="p">;</span>
+	<span class="nx">cb</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">&quot;chkOptionInput&quot;</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">caption</span><span class="p">)</span>
+		<span class="nx">wikify</span><span class="p">(</span><span class="nx">caption</span><span class="p">,</span><span class="nx">parent</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">cb</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createTiddlyElement</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span><span class="nx">element</span><span class="p">,</span><span class="nx">id</span><span class="p">,</span><span class="nx">className</span><span class="p">,</span><span class="nx">text</span><span class="p">,</span><span class="nx">attribs</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">n</span><span class="p">,</span><span class="nx">e</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="nx">element</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">className</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+		<span class="nx">e</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">id</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+		<span class="nx">e</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;id&quot;</span><span class="p">,</span><span class="nx">id</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">text</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+		<span class="nx">e</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">text</span><span class="p">));</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">attribs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span><span class="p">(</span><span class="nx">n</span> <span class="k">in</span> <span class="nx">attribs</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">e</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span><span class="nx">attribs</span><span class="p">[</span><span class="nx">n</span><span class="p">]);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">parent</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span>
+		<span class="nx">parent</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">e</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createTiddlyButton</span><span class="p">(</span><span class="nx">parent</span><span class="p">,</span><span class="nx">text</span><span class="p">,</span><span class="nx">tooltip</span><span class="p">,</span><span class="nx">action</span><span class="p">,</span><span class="nx">className</span><span class="p">,</span><span class="nx">id</span><span class="p">,</span><span class="nx">accessKey</span><span class="p">,</span><span class="nx">attribs</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">i</span><span class="p">,</span><span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">);</span>
+	<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">,</span><span class="s2">&quot;javascript:;&quot;</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span> <span class="o">=</span> <span class="nx">action</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">tooltip</span><span class="p">)</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="nx">tooltip</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">text</span><span class="p">)</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">createTextNode</span><span class="p">(</span><span class="nx">text</span><span class="p">));</span>
+	<span class="nx">btn</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">className</span> <span class="o">||</span> <span class="s2">&quot;button&quot;</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">id</span> <span class="o">=</span> <span class="nx">id</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">attribs</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">for</span><span class="p">(</span><span class="nx">i</span> <span class="k">in</span> <span class="nx">attribs</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">i</span><span class="p">,</span><span class="nx">attribs</span><span class="p">[</span><span class="nx">i</span><span class="p">]);</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">parent</span><span class="p">)</span>
+		<span class="nx">parent</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">btn</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">accessKey</span><span class="p">)</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;accessKey&quot;</span><span class="p">,</span><span class="nx">accessKey</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">btn</span><span class="p">;</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-7">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-7">&#182;</a>               </div>               <h1>Create a link to an external resource</h1>
+
+<h1>place - element where the link should be created</h1>
+
+<h1>url - link target</h1>
+
+<h1>label - link text (optional)</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">createExternalLink</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span><span class="nx">url</span><span class="p">,</span><span class="nx">label</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">link</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">);</span>
+	<span class="nx">link</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="s2">&quot;externalLink&quot;</span><span class="p">;</span>
+	<span class="nx">link</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="nx">url</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">externalLinkTooltip</span><span class="p">;</span>
+	<span class="nx">link</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">f</span> <span class="o">?</span> <span class="nx">f</span><span class="p">.</span><span class="nx">format</span><span class="p">([</span><span class="nx">url</span><span class="p">])</span> <span class="o">:</span> <span class="nx">url</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">chkOpenInNewWindow</span><span class="p">)</span>
+		<span class="nx">link</span><span class="p">.</span><span class="nx">target</span> <span class="o">=</span> <span class="s2">&quot;_blank&quot;</span><span class="p">;</span>
+	<span class="nx">place</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">link</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">label</span><span class="p">)</span>
+		<span class="nx">createTiddlyText</span><span class="p">(</span><span class="nx">link</span><span class="p">,</span> <span class="nx">label</span><span class="p">);</span>
+	<span class="k">return</span> <span class="nx">link</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">getTiddlyLinkInfo</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="nx">currClasses</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">classes</span> <span class="o">=</span> <span class="nx">currClasses</span> <span class="o">?</span> <span class="nx">currClasses</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span> <span class="o">:</span> <span class="p">[];</span>
+	<span class="nx">classes</span><span class="p">.</span><span class="nx">pushUnique</span><span class="p">(</span><span class="s2">&quot;tiddlyLink&quot;</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">tiddler</span> <span class="o">=</span> <span class="nx">store</span><span class="p">.</span><span class="nx">fetchTiddler</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">subTitle</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">tiddler</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">subTitle</span> <span class="o">=</span> <span class="nx">tiddler</span><span class="p">.</span><span class="nx">getSubtitle</span><span class="p">();</span>
+		<span class="nx">classes</span><span class="p">.</span><span class="nx">pushUnique</span><span class="p">(</span><span class="s2">&quot;tiddlyLinkExisting&quot;</span><span class="p">);</span>
+		<span class="nx">classes</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;tiddlyLinkNonExisting&quot;</span><span class="p">);</span>
+		<span class="nx">classes</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;shadow&quot;</span><span class="p">);</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+	    <span class="kd">var</span> <span class="nx">f</span><span class="p">;</span>
+		<span class="nx">classes</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;tiddlyLinkExisting&quot;</span><span class="p">);</span>
+		<span class="nx">classes</span><span class="p">.</span><span class="nx">pushUnique</span><span class="p">(</span><span class="s2">&quot;tiddlyLinkNonExisting&quot;</span><span class="p">);</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">isShadowTiddler</span><span class="p">(</span><span class="nx">title</span><span class="p">))</span> <span class="p">{</span>
+			<span class="nx">f</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">shadowedTiddlerToolTip</span><span class="p">;</span>
+			<span class="nx">classes</span><span class="p">.</span><span class="nx">pushUnique</span><span class="p">(</span><span class="s2">&quot;shadow&quot;</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">f</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">undefinedTiddlerToolTip</span><span class="p">;</span>
+			<span class="nx">classes</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s2">&quot;shadow&quot;</span><span class="p">);</span>
+		<span class="p">}</span>
+		<span class="nx">subTitle</span> <span class="o">=</span> <span class="nx">f</span> <span class="o">?</span> <span class="nx">f</span><span class="p">.</span><span class="nx">format</span><span class="p">([</span><span class="nx">title</span><span class="p">])</span> <span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">config</span><span class="p">.</span><span class="nx">annotations</span><span class="p">[</span><span class="nx">title</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;string&quot;</span><span class="p">)</span>
+		<span class="nx">subTitle</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">annotations</span><span class="p">[</span><span class="nx">title</span><span class="p">];</span>
+	<span class="k">return</span> <span class="p">{</span><span class="nx">classes</span><span class="o">:</span> <span class="nx">classes</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">),</span><span class="nx">subTitle</span><span class="o">:</span> <span class="nx">subTitle</span><span class="p">};</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-8">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-8">&#182;</a>               </div>               <p>Event handler for clicking on a tiddly link</p>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">onClickTiddlerLink</span><span class="p">(</span><span class="nx">ev</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">ev</span> <span class="o">||</span> <span class="nb">window</span><span class="p">.</span><span class="nx">event</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">target</span> <span class="o">=</span> <span class="nx">resolveTarget</span><span class="p">(</span><span class="nx">e</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">link</span> <span class="o">=</span> <span class="nx">target</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">fields</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">noToggle</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+	<span class="k">do</span> <span class="p">{</span>
+		<span class="nx">title</span> <span class="o">=</span> <span class="nx">link</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;tiddlyLink&quot;</span><span class="p">);</span>
+		<span class="nx">fields</span> <span class="o">=</span> <span class="nx">link</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;tiddlyFields&quot;</span><span class="p">);</span>
+		<span class="nx">noToggle</span> <span class="o">=</span> <span class="nx">link</span><span class="p">.</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s2">&quot;noToggle&quot;</span><span class="p">);</span>
+		<span class="nx">link</span> <span class="o">=</span> <span class="nx">link</span><span class="p">.</span><span class="nx">parentNode</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">while</span><span class="p">(</span><span class="nx">title</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="nx">link</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">store</span><span class="p">.</span><span class="nx">isShadowTiddler</span><span class="p">(</span><span class="nx">title</span><span class="p">))</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">f</span> <span class="o">=</span> <span class="nx">fields</span> <span class="o">?</span> <span class="nx">fields</span><span class="p">.</span><span class="nx">decodeHashMap</span><span class="p">()</span> <span class="o">:</span> <span class="p">{};</span>
+		<span class="nx">fields</span> <span class="o">=</span> <span class="nb">String</span><span class="p">.</span><span class="nx">encodeHashMap</span><span class="p">(</span><span class="nx">merge</span><span class="p">(</span><span class="nx">f</span><span class="p">,</span><span class="nx">config</span><span class="p">.</span><span class="nx">defaultCustomFields</span><span class="p">,</span><span class="kc">true</span><span class="p">));</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">toggling</span> <span class="o">=</span> <span class="nx">e</span><span class="p">.</span><span class="nx">metaKey</span> <span class="o">||</span> <span class="nx">e</span><span class="p">.</span><span class="nx">ctrlKey</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">config</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">chkToggleLinks</span><span class="p">)</span>
+			<span class="nx">toggling</span> <span class="o">=</span> <span class="o">!</span><span class="nx">toggling</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">noToggle</span><span class="p">)</span>
+			<span class="nx">toggling</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">store</span><span class="p">.</span><span class="nx">getTiddler</span><span class="p">(</span><span class="nx">title</span><span class="p">))</span>
+			<span class="nx">fields</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+		<span class="nx">story</span><span class="p">.</span><span class="nx">displayTiddler</span><span class="p">(</span><span class="nx">target</span><span class="p">,</span><span class="nx">title</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="kc">true</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="nx">fields</span><span class="p">,</span><span class="nx">toggling</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="nx">clearMessage</span><span class="p">();</span>
+	<span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span></pre></div>             </td>           </tr>                               <tr id="section-9">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-9">&#182;</a>               </div>               <h1>Create a link to a particular tiddler</h1>
+
+<h1>place - element where the link should be created</h1>
+
+<h1>title - title of target tiddler</h1>
+
+<h1>includeText - flag for whether to include the title as the text of the link</h1>
+
+<h1>className - custom CSS class for the link</h1>
+
+<h1>linkedFromTiddler - tiddler from which to inherit extended fields</h1>
+
+<h1>noToggle - flag to force the link to open the target, even if chkToggleLinks is on</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">createTiddlyLink</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span><span class="nx">title</span><span class="p">,</span><span class="nx">includeText</span><span class="p">,</span><span class="nx">className</span><span class="p">,</span><span class="nx">isStatic</span><span class="p">,</span><span class="nx">linkedFromTiddler</span><span class="p">,</span><span class="nx">noToggle</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">title</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">trim</span><span class="p">(</span><span class="nx">title</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">text</span> <span class="o">=</span> <span class="nx">includeText</span> <span class="o">?</span> <span class="nx">title</span> <span class="o">:</span> <span class="kc">null</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">getTiddlyLinkInfo</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="nx">className</span><span class="p">);</span>
+	<span class="kd">var</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nx">isStatic</span> <span class="o">?</span> <span class="nx">createExternalLink</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span><span class="nx">store</span><span class="p">.</span><span class="nx">getTiddlerText</span><span class="p">(</span><span class="s2">&quot;SiteUrl&quot;</span><span class="p">,</span><span class="kc">null</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="nx">title</span><span class="p">)</span> <span class="o">:</span> <span class="nx">createTiddlyButton</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span><span class="nx">text</span><span class="p">,</span><span class="nx">i</span><span class="p">.</span><span class="nx">subTitle</span><span class="p">,</span><span class="nx">onClickTiddlerLink</span><span class="p">,</span><span class="nx">i</span><span class="p">.</span><span class="nx">classes</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">isStatic</span><span class="p">)</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">className</span> <span class="o">+=</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="nx">className</span><span class="p">;</span>
+	<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;refresh&quot;</span><span class="p">,</span><span class="s2">&quot;link&quot;</span><span class="p">);</span>
+	<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;tiddlyLink&quot;</span><span class="p">,</span><span class="nx">title</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">noToggle</span><span class="p">)</span>
+		<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;noToggle&quot;</span><span class="p">,</span><span class="s2">&quot;true&quot;</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">linkedFromTiddler</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">fields</span> <span class="o">=</span> <span class="nx">linkedFromTiddler</span><span class="p">.</span><span class="nx">getInheritedFields</span><span class="p">();</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">fields</span><span class="p">)</span>
+			<span class="nx">btn</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">&quot;tiddlyFields&quot;</span><span class="p">,</span><span class="nx">fields</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">btn</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">refreshTiddlyLink</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span><span class="nx">title</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">getTiddlyLinkInfo</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="nx">e</span><span class="p">.</span><span class="nx">className</span><span class="p">);</span>
+	<span class="nx">e</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span> <span class="nx">i</span><span class="p">.</span><span class="nx">classes</span><span class="p">;</span>
+	<span class="nx">e</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">i</span><span class="p">.</span><span class="nx">subTitle</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">createTiddlyDropDown</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span><span class="nx">onchange</span><span class="p">,</span><span class="nx">options</span><span class="p">,</span><span class="nx">defaultValue</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">sel</span> <span class="o">=</span> <span class="nx">createTiddlyElement</span><span class="p">(</span><span class="nx">place</span><span class="p">,</span><span class="s2">&quot;select&quot;</span><span class="p">);</span>
+	<span class="nx">sel</span><span class="p">.</span><span class="nx">onchange</span> <span class="o">=</span> <span class="nx">onchange</span><span class="p">;</span>
+	<span class="kd">var</span> <span class="nx">t</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="nx">t</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">t</span><span class="o">&lt;</span><span class="nx">options</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">t</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+		<span class="kd">var</span> <span class="nx">e</span> <span class="o">=</span> <span class="nx">createTiddlyElement</span><span class="p">(</span><span class="nx">sel</span><span class="p">,</span><span class="s2">&quot;option&quot;</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="kc">null</span><span class="p">,</span><span class="nx">options</span><span class="p">[</span><span class="nx">t</span><span class="p">].</span><span class="nx">caption</span><span class="p">);</span>
+		<span class="nx">e</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">options</span><span class="p">[</span><span class="nx">t</span><span class="p">].</span><span class="nx">name</span><span class="p">;</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">options</span><span class="p">[</span><span class="nx">t</span><span class="p">].</span><span class="nx">name</span> <span class="o">==</span> <span class="nx">defaultValue</span><span class="p">)</span>
+			<span class="nx">e</span><span class="p">.</span><span class="nx">selected</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="nx">sel</span><span class="p">;</span>
+<span class="p">}</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 

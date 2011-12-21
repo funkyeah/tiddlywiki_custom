@@ -1,0 +1,207 @@
+<!DOCTYPE html>  <html> <head>   <title>FileAdaptor.js</title>   <meta http-equiv="content-type" content="text/html; charset=UTF-8">   <link rel="stylesheet" media="all" href="docco.css" /> </head> <body>   <div id="container">     <div id="background"></div>            <div id="jump_to">         Jump To &hellip;         <div id="jump_wrapper">           <div id="jump_page">                                           <a class="source" href="AdaptorBase.html">                 AdaptorBase.js               </a>                                           <a class="source" href="Animator.html">                 Animator.js               </a>                                           <a class="source" href="Backstage.html">                 Backstage.js               </a>                                           <a class="source" href="BasicTypes.html">                 BasicTypes.js               </a>                                           <a class="source" href="Commands.html">                 Commands.js               </a>                                           <a class="source" href="Config.html">                 Config.js               </a>                                           <a class="source" href="ConfigBrowser.html">                 ConfigBrowser.js               </a>                                           <a class="source" href="Crypto.html">                 Crypto.js               </a>                                           <a class="source" href="Dates.html">                 Dates.js               </a>                                           <a class="source" href="Dom.html">                 Dom.js               </a>                                           <a class="source" href="FileAdaptor.html">                 FileAdaptor.js               </a>                                           <a class="source" href="FileSystem.html">                 FileSystem.js               </a>                                           <a class="source" href="FileSystemUtils.html">                 FileSystemUtils.js               </a>                                           <a class="source" href="Filters.html">                 Filters.js               </a>                                           <a class="source" href="Formatter.html">                 Formatter.js               </a>                                           <a class="source" href="FormatterHelpers.html">                 FormatterHelpers.js               </a>                                           <a class="source" href="Guide.html">                 Guide.js               </a>                                           <a class="source" href="Http.html">                 Http.js               </a>                                           <a class="source" href="Import.html">                 Import.js               </a>                                           <a class="source" href="Lingo.html">                 Lingo.js               </a>                                           <a class="source" href="ListView.html">                 ListView.js               </a>                                           <a class="source" href="LoaderSaver.html">                 LoaderSaver.js               </a>                                           <a class="source" href="Macros.html">                 Macros.js               </a>                                           <a class="source" href="Manager.html">                 Manager.js               </a>                                           <a class="source" href="Messages.html">                 Messages.js               </a>                                           <a class="source" href="Morpher.html">                 Morpher.js               </a>                                           <a class="source" href="NewTiddler.html">                 NewTiddler.js               </a>                                           <a class="source" href="Numbers.html">                 Numbers.js               </a>                                           <a class="source" href="Options.html">                 Options.js               </a>                                           <a class="source" href="Paramifiers.html">                 Paramifiers.js               </a>                                           <a class="source" href="Popup.html">                 Popup.js               </a>                                           <a class="source" href="RGB.html">                 RGB.js               </a>                                           <a class="source" href="Refresh.html">                 Refresh.js               </a>                                           <a class="source" href="Saving.html">                 Saving.js               </a>                                           <a class="source" href="SavingRSS.html">                 SavingRSS.js               </a>                                           <a class="source" href="Scroller.html">                 Scroller.js               </a>                                           <a class="source" href="Search.html">                 Search.js               </a>                                           <a class="source" href="Slider.html">                 Slider.js               </a>                                           <a class="source" href="Sparkline.html">                 Sparkline.js               </a>                                           <a class="source" href="Story.html">                 Story.js               </a>                                           <a class="source" href="Strings.html">                 Strings.js               </a>                                           <a class="source" href="TW21Loader.html">                 TW21Loader.js               </a>                                           <a class="source" href="TW21Saver.html">                 TW21Saver.js               </a>                                           <a class="source" href="Tabs.html">                 Tabs.js               </a>                                           <a class="source" href="Tiddler.html">                 Tiddler.js               </a>                                           <a class="source" href="TiddlerFields.html">                 TiddlerFields.js               </a>                                           <a class="source" href="TiddlyWiki.html">                 TiddlyWiki.js               </a>                                           <a class="source" href="Toolbar.html">                 Toolbar.js               </a>                                           <a class="source" href="Upgrade.html">                 Upgrade.js               </a>                                           <a class="source" href="Utilities.html">                 Utilities.js               </a>                                           <a class="source" href="UtilitiesPopup.html">                 UtilitiesPopup.js               </a>                                           <a class="source" href="Version.html">                 Version.js               </a>                                           <a class="source" href="Wikifier.html">                 Wikifier.js               </a>                                           <a class="source" href="Wizard.html">                 Wizard.js               </a>                                           <a class="source" href="Zoomer.html">                 Zoomer.js               </a>                                           <a class="source" href="main.html">                 main.js               </a>                        </div>         </div>       </div>          <table cellpadding="0" cellspacing="0">       <thead>         <tr>           <th class="docs">             <h1>               FileAdaptor.js             </h1>           </th>           <th class="code">           </th>         </tr>       </thead>       <tbody>                               <tr id="section-1">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-1">&#182;</a>               </div>               <p>--</p>
+
+<h2>-- Server adaptor for talking to static TiddlyWiki files</h2>             </td>             <td class="code">               <div class="highlight"><pre><span class="kd">function</span> <span class="nx">FileAdaptor</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="p">}</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AdaptorBase</span><span class="p">();</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">serverType</span> <span class="o">=</span> <span class="s1">&#39;file&#39;</span><span class="p">;</span>
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">serverLabel</span> <span class="o">=</span> <span class="s1">&#39;TiddlyWiki&#39;</span><span class="p">;</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">loadTiddlyWikiSuccess</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span></pre></div>             </td>           </tr>                               <tr id="section-2">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-2">&#182;</a>               </div>               <h1>Load the content into a TiddlyWiki() object</h1>             </td>             <td class="code">               <div class="highlight"><pre>	<span class="nx">context</span><span class="p">.</span><span class="nx">adaptor</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">TiddlyWiki</span><span class="p">();</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">context</span><span class="p">.</span><span class="nx">adaptor</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">importTiddlyWiki</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">.</span><span class="nx">responseText</span><span class="p">))</span> <span class="p">{</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">statusText</span> <span class="o">=</span> <span class="nx">config</span><span class="p">.</span><span class="nx">messages</span><span class="p">.</span><span class="nx">invalidFileError</span><span class="p">.</span><span class="nx">format</span><span class="p">([</span><span class="nx">context</span><span class="p">.</span><span class="nx">host</span><span class="p">]);</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">complete</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">context</span><span class="p">.</span><span class="nx">userParams</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">loadTiddlyWikiError</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">statusText</span> <span class="o">=</span> <span class="nx">jqXHR</span><span class="p">.</span><span class="nx">message</span><span class="p">;</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">complete</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">context</span><span class="p">.</span><span class="nx">userParams</span><span class="p">);</span>
+<span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-3">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-3">&#182;</a>               </div>               <p>Get the list of workspaces on a given server</p>
+
+<h1>context - passed on as a parameter to the callback function</h1>
+
+<h1>userParams - user settable object object that is passed on unchanged to the callback function</h1>
+
+<h1>callback - function to be called on completion</h1>
+
+<h1>Return value is true if the request was successfully issued, false if this connector doesn't support getWorkspaceList(),</h1>
+
+<h1>or an error description string if there was a problem</h1>
+
+<h1>The callback parameters are callback(context,userParams)</h1>
+
+<h1>context.status - true if OK, false if error</h1>
+
+<h1>context.statusText - error message if there was an error</h1>
+
+<h1>context.adaptor - reference to this adaptor object</h1>
+
+<h1>userParams - parameters as originally passed into the getWorkspaceList function</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getWorkspaceList</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">,</span><span class="nx">callback</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">context</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">setContext</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">workspaces</span> <span class="o">=</span> <span class="p">[{</span><span class="nx">title</span><span class="o">:</span><span class="s2">&quot;(default)&quot;</span><span class="p">}];</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">callback</span><span class="p">)</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nx">callback</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">);},</span><span class="mi">10</span><span class="p">);</span>
+	<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-4">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-4">&#182;</a>               </div>               <p>Gets the list of tiddlers within a given workspace</p>
+
+<h1>context - passed on as a parameter to the callback function</h1>
+
+<h1>userParams - user settable object object that is passed on unchanged to the callback function</h1>
+
+<h1>callback - function to be called on completion</h1>
+
+<h1>filter - filter expression</h1>
+
+<h1>Return value is true if the request was successfully issued,</h1>
+
+<h1>or an error description string if there was a problem</h1>
+
+<h1>The callback parameters are callback(context,userParams)</h1>
+
+<h1>context.status - true if OK, false if error</h1>
+
+<h1>context.statusText - error message if there was an error</h1>
+
+<h1>context.adaptor - reference to this adaptor object</h1>
+
+<h1>context.tiddlers - array of tiddler objects</h1>
+
+<h1>userParams - parameters as originally passed into the getTiddlerList function</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getTiddlerList</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">,</span><span class="nx">callback</span><span class="p">,</span><span class="nx">filter</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">context</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">setContext</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">context</span><span class="p">.</span><span class="nx">filter</span><span class="p">)</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">filter</span> <span class="o">=</span> <span class="nx">filter</span><span class="p">;</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">complete</span> <span class="o">=</span> <span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">getTiddlerListComplete</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">store</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">context</span><span class="p">.</span><span class="nx">complete</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">context</span><span class="p">.</span><span class="nx">userParams</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="nx">type</span><span class="o">:</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+		<span class="nx">url</span><span class="o">:</span><span class="nx">context</span><span class="p">.</span><span class="nx">host</span><span class="p">,</span>
+		<span class="nx">processData</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+		<span class="nx">success</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">textStatus</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">loadTiddlyWikiSuccess</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">);</span>
+		<span class="p">},</span>
+		<span class="nx">error</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">,</span><span class="nx">textStatus</span><span class="p">,</span><span class="nx">errorThrown</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">xhr</span> <span class="o">=</span> <span class="nx">jqXHR</span><span class="p">;</span>
+			<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">loadTiddlyWikiError</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+	<span class="k">return</span> <span class="nx">ajaxReq</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">getTiddlerListComplete</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">status</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">filter</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">adaptor</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">filterTiddlers</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">filter</span><span class="p">);</span>
+		<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span> <span class="o">=</span> <span class="p">[];</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">adaptor</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">forEachTiddler</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="nx">tiddler</span><span class="p">)</span> <span class="p">{</span><span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">tiddler</span><span class="p">);});</span>
+		<span class="p">}</span>
+		<span class="kd">var</span> <span class="nx">i</span><span class="p">;</span>
+		<span class="k">for</span><span class="p">(</span><span class="nx">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="nx">i</span><span class="o">&lt;</span><span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">serverType</span><span class="p">;</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.host&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">AdaptorBase</span><span class="p">.</span><span class="nx">minHostName</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">host</span><span class="p">);</span>
+			<span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.page.revision&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">tiddlers</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">modified</span><span class="p">.</span><span class="nx">convertToYYYYMMDDHHMM</span><span class="p">();</span>
+		<span class="p">}</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">callback</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nx">context</span><span class="p">.</span><span class="nx">callback</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">);},</span><span class="mi">10</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">generateTiddlerInfo</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">tiddler</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">info</span> <span class="o">=</span> <span class="p">{};</span>
+	<span class="nx">info</span><span class="p">.</span><span class="nx">uri</span> <span class="o">=</span> <span class="nx">tiddler</span><span class="p">.</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.host&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="s2">&quot;#&quot;</span> <span class="o">+</span> <span class="nx">tiddler</span><span class="p">.</span><span class="nx">title</span><span class="p">;</span>
+	<span class="k">return</span> <span class="nx">info</span><span class="p">;</span>
+<span class="p">};</span></pre></div>             </td>           </tr>                               <tr id="section-5">             <td class="docs">               <div class="pilwrap">                 <a class="pilcrow" href="#section-5">&#182;</a>               </div>               <p>Retrieve a tiddler from a given workspace on a given server</p>
+
+<h1>title - title of the tiddler to get</h1>
+
+<h1>context - passed on as a parameter to the callback function</h1>
+
+<h1>userParams - user settable object object that is passed on unchanged to the callback function</h1>
+
+<h1>callback - function to be called on completion</h1>
+
+<h1>Return value is true if the request was successfully issued,</h1>
+
+<h1>or an error description string if there was a problem</h1>
+
+<h1>The callback parameters are callback(context,userParams)</h1>
+
+<h1>context.status - true if OK, false if error</h1>
+
+<h1>context.statusText - error message if there was an error</h1>
+
+<h1>context.adaptor - reference to this adaptor object</h1>
+
+<h1>context.tiddler - the retrieved tiddler, or null if it cannot be found</h1>
+
+<h1>userParams - parameters as originally passed into the getTiddler function</h1>             </td>             <td class="code">               <div class="highlight"><pre><span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">getTiddler</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">title</span><span class="p">,</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">,</span><span class="nx">callback</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="nx">context</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">setContext</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">,</span><span class="nx">callback</span><span class="p">);</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="nx">title</span><span class="p">;</span>
+	<span class="nx">context</span><span class="p">.</span><span class="nx">complete</span> <span class="o">=</span> <span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">getTiddlerComplete</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">adaptor</span><span class="p">.</span><span class="nx">store</span><span class="p">)</span> <span class="p">{</span>
+		<span class="k">return</span> <span class="nx">context</span><span class="p">.</span><span class="nx">complete</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">context</span><span class="p">.</span><span class="nx">userParams</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+		<span class="nx">type</span><span class="o">:</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+		<span class="nx">url</span><span class="o">:</span><span class="nx">context</span><span class="p">.</span><span class="nx">host</span><span class="p">,</span>
+		<span class="nx">processData</span><span class="o">:</span><span class="kc">false</span><span class="p">,</span>
+		<span class="nx">success</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span><span class="nx">textStatus</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">loadTiddlyWikiSuccess</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">);</span>
+		<span class="p">},</span>
+		<span class="nx">error</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">jqXHR</span><span class="p">,</span><span class="nx">textStatus</span><span class="p">,</span><span class="nx">errorThrown</span><span class="p">)</span> <span class="p">{</span>
+			<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">loadTiddlyWikiError</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">jqXHR</span><span class="p">);</span>
+		<span class="p">}</span>
+	<span class="p">};</span>
+	<span class="k">return</span> <span class="nx">ajaxReq</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+<span class="p">};</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">getTiddlerComplete</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="kd">var</span> <span class="nx">t</span> <span class="o">=</span> <span class="nx">context</span><span class="p">.</span><span class="nx">adaptor</span><span class="p">.</span><span class="nx">store</span><span class="p">.</span><span class="nx">fetchTiddler</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">title</span><span class="p">);</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">t</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.type&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">serverType</span><span class="p">;</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.host&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">AdaptorBase</span><span class="p">.</span><span class="nx">minHostName</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">host</span><span class="p">);</span>
+		<span class="nx">t</span><span class="p">.</span><span class="nx">fields</span><span class="p">[</span><span class="s1">&#39;server.page.revision&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nx">t</span><span class="p">.</span><span class="nx">modified</span><span class="p">.</span><span class="nx">convertToYYYYMMDDHHMM</span><span class="p">();</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">tiddler</span> <span class="o">=</span> <span class="nx">t</span><span class="p">;</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span> <span class="c1">//# tiddler does not exist in document</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">status</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+	<span class="p">}</span>
+	<span class="k">if</span><span class="p">(</span><span class="nx">context</span><span class="p">.</span><span class="nx">allowSynchronous</span><span class="p">)</span> <span class="p">{</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">isSynchronous</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+		<span class="nx">context</span><span class="p">.</span><span class="nx">callback</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">);</span>
+	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+		<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span><span class="nx">context</span><span class="p">.</span><span class="nx">callback</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span><span class="nx">userParams</span><span class="p">);},</span><span class="mi">10</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">close</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span>
+<span class="p">{</span>
+	<span class="k">this</span><span class="p">.</span><span class="nx">store</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="nx">config</span><span class="p">.</span><span class="nx">adaptors</span><span class="p">[</span><span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">serverType</span><span class="p">]</span> <span class="o">=</span> <span class="nx">FileAdaptor</span><span class="p">;</span>
+
+<span class="nx">config</span><span class="p">.</span><span class="nx">defaultAdaptor</span> <span class="o">=</span> <span class="nx">FileAdaptor</span><span class="p">.</span><span class="nx">serverType</span><span class="p">;</span>
+
+</pre></div>             </td>           </tr>                </tbody>     </table>   </div> </body> </html> 
